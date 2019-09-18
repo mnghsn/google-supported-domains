@@ -47,7 +47,7 @@ test('test main domain', function (t) {
     'google.com': true,
     'google.co.jp': true,
     'example.com': false,
-    'example.net': false,
+    'example.net': false
   }
 
   for (const domain in expected) {
