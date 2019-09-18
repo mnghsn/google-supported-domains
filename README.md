@@ -1,5 +1,7 @@
 # google-supported-domains
 
+[![Build Status](https://travis-ci.org/jmlntw/google-supported-domains.svg?branch=master)](https://travis-ci.org/jmlntw/google-supported-domains)
+
 > :construction:
 > This repository is under development.
 > Do not use in production.
