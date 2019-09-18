@@ -1,0 +1,40 @@
+{
+  "name": "google-supported-domains",
+  "version": "0.1.0",
+  "description": "Gets Google supported domains in Node.js.",
+  "keywords": [
+    "google",
+    "domains",
+    "tld"
+  ],
+  "author": {
+    "name": "Jimmy Lin",
+    "email": "jmlntw@gmail.com"
+  },
+  "license": "MIT",
+  "homepage": "https://github.com/jmlntw/google-supported-domains",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jmlntw/google-supported-domains.git"
+  },
+  "bugs": {
+    "url": "https://github.com/jmlntw/google-supported-domains/issues"
+  },
+  "main": "./index.js",
+  "files": [
+    "./domains.js"
+  ],
+  "scripts": {
+    "build": "node build.js",
+    "test": "node test.js"
+  },
+  "devDependencies": {
+    "app-root-path": "^2.2.0",
+    "node-fetch": "^2.6.0",
+    "standard": "^14.3.0",
+    "tape": "^4.11.0"
+  },
+  "engines": {
+    "node": ">=10"
+  }
+}
