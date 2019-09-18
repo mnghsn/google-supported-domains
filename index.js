@@ -2,9 +2,9 @@ const { domains } = require('./domains')
 
 module.exports = {
   /**
-   * Returns all Google supported domains as a string array.
+   * Returns all Google supported domains.
    * @public
-   * @returns {string[]}
+   * @returns {string[]} Returns all domains as a string array.
    */
   all: function all () {
     return domains
