@@ -43,23 +43,39 @@ test('validate all google domains', function (t) {
 })
 
 test('test main domain', function (t) {
-  ;['google.com', 'google.co.jp'].forEach(domain => {
-    t.equal(googleSupportedDomains.test(domain), true, `yes: ${domain}`)
-  })
-  ;['example.com', 'example.net'].forEach(domain => {
-    t.equal(googleSupportedDomains.test(domain), false, `no: ${domain}`)
-  })
+  const expected = {
+    'google.com': true,
+    'google.co.jp': true,
+    'example.com': false,
+    'example.net': false,
+  }
+
+  for (const domain in expected) {
+    t.equal(
+      googleSupportedDomains.test(domain),
+      expected[domain],
+      expected[domain] ? `yes: ${domain}` : `no: ${domain}`
+    )
+  }
 
   t.end()
 })
 
 test('test subdomains', function (t) {
-  ;['mail.google.com', 'drive.google.com'].forEach(domain => {
-    t.equal(googleSupportedDomains.test(domain), true, `yes: ${domain}`)
-  })
-  ;['foo.example.com', 'bar.example.net'].forEach(domain => {
-    t.equal(googleSupportedDomains.test(domain), false, `no: ${domain}`)
-  })
+  const expected = {
+    'mail.google.com': true,
+    'drive.google.com': true,
+    'foo.example.com': false,
+    'bar.example.com': false
+  }
+
+  for (const domain in expected) {
+    t.equal(
+      googleSupportedDomains.test(domain),
+      expected[domain],
+      expected[domain] ? `yes: ${domain}` : `no: ${domain}`
+    )
+  }
 
   t.end()
 })
