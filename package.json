@@ -1,6 +1,6 @@
 {
   "name": "google-supported-domains",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Gets Google supported domains in Node.js.",
   "keywords": [
     "google",
