@@ -1,6 +1,7 @@
 # google-supported-domains
 
 [![Build Status](https://travis-ci.org/jmlntw/google-supported-domains.svg?branch=master)](https://travis-ci.org/jmlntw/google-supported-domains)
+[![npm](https://img.shields.io/npm/v/google-supported-domains)](https://www.npmjs.com/package/google-supported-domains)
 
 > :construction:
 > This repository is under development.
