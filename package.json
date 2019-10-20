@@ -7,23 +7,23 @@
     "domains",
     "tld"
   ],
-  "author": {
-    "name": "Jimmy Lin",
-    "email": "jmlntw@gmail.com"
-  },
-  "license": "MIT",
   "homepage": "https://github.com/jmlntw/google-supported-domains",
+  "bugs": {
+    "url": "https://github.com/jmlntw/google-supported-domains/issues"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/jmlntw/google-supported-domains.git"
   },
-  "bugs": {
-    "url": "https://github.com/jmlntw/google-supported-domains/issues"
+  "license": "MIT",
+  "author": {
+    "name": "Jimmy Lin",
+    "email": "jmlntw@gmail.com"
   },
-  "main": "index.js",
   "files": [
     "domains.js"
   ],
+  "main": "index.js",
   "scripts": {
     "build": "node build.js",
     "test": "node test.js"
