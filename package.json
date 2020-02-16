@@ -29,10 +29,10 @@
     "test": "node test.js"
   },
   "devDependencies": {
-    "app-root-path": "^2.2.0",
+    "app-root-path": "^3.0.0",
     "node-fetch": "^2.6.0",
     "standard": "^14.3.0",
-    "tape": "^4.11.0"
+    "tape": "^4.13.0"
   },
   "engines": {
     "node": ">=10"
