@@ -5,7 +5,7 @@ const test = require('tape')
 const googleSupportedDomains = appRoot.require('./')
 
 test('lint source codes', function (t) {
-  const files = appRoot.resolve('*.js')
+  const files = appRoot.resolve('./')
   const options = {}
   const callback = function (error, { results }) {
     t.error(error)
