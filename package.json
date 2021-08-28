@@ -32,7 +32,7 @@
     "app-root-path": "^3.0.0",
     "node-fetch": "^2.6.0",
     "standard": "^16.0.0",
-    "tape": "^5.0.0"
+    "tape": "^5.3.0"
   },
   "engines": {
     "node": ">=10"
