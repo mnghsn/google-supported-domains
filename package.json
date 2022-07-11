@@ -29,7 +29,6 @@
     "test": "node test/test.js"
   },
   "devDependencies": {
-    "app-root-path": "^3.0.0",
     "node-fetch": "^2.6.0",
     "standard": "^16.0.0",
     "tape": "^5.5.0"
