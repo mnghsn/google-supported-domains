@@ -1,11 +1,11 @@
-const appRoot = require('app-root-path')
+const path = require('path')
 const standard = require('standard')
 const test = require('tape')
 
-const googleSupportedDomains = appRoot.require('./')
+const googleSupportedDomains = require('../')
 
 test('lint source codes', function (t) {
-  const files = appRoot.resolve('./')
+  const files = path.resolve(__dirname, './')
   const options = {}
   const callback = function (error, { results }) {
     t.error(error)

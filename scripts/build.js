@@ -1,10 +1,10 @@
 const fs = require('fs')
-const appRoot = require('app-root-path')
+const path = require('path')
 const fetch = require('node-fetch')
 const standard = require('standard')
 
 const GOOGLE_SUPPORTED_DOMAINS_URL = 'https://www.google.com/supported_domains'
-const OUTPUT_PATH = appRoot.resolve('./src/domains.js')
+const OUTPUT_PATH = path.resolve(__dirname, '../src/domains.js')
 
 fetch(GOOGLE_SUPPORTED_DOMAINS_URL)
   .then(response => response.text())
