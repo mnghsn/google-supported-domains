@@ -29,6 +29,9 @@
     "test": "node test/test.js"
   },
   "devDependencies": {
+    "@types/eslint": "^8.4.0",
+    "@types/prettier": "^2.6.0",
+    "@types/tape": "^4.13.0",
     "eslint": "^8.19.0",
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-prettier": "^4.2.0",
