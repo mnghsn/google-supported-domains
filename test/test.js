@@ -8,9 +8,7 @@ test('lint source codes', async function (t) {
   const results = await eslint.lintFiles(['**/*.js'])
 
   for (const { filePath, messages } of results) {
-    messages.length === 0
-      ? t.pass(filePath)
-      : t.fail(filePath)
+    messages.length === 0 ? t.pass(filePath) : t.fail(filePath)
 
     for (const { line, column, message } of messages) {
       t.comment(`${filePath}:${line}:${column}: ${message}`)
