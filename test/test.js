@@ -1,29 +1,22 @@
-const path = require('path')
-const standard = require('standard')
+const { ESLint } = require('eslint')
 const test = require('tape')
 
 const googleSupportedDomains = require('../')
 
-test('lint source codes', function (t) {
-  const files = path.resolve(__dirname, './')
-  const options = {}
-  const callback = function (error, { results }) {
-    t.error(error)
+test('lint source codes', async function (t) {
+  const eslint = new ESLint()
+  const results = await eslint.lintFiles(['**/*.js'])
 
-    for (const { filePath, messages } of results) {
-      messages.length === 0
-        ? t.pass(filePath)
-        : t.fail(filePath)
+  for (const { filePath, messages } of results) {
+    messages.length === 0
+      ? t.pass(filePath)
+      : t.fail(filePath)
 
-      for (const { line, column, message } of messages) {
-        t.comment(`${filePath}:${line}:${column}: ${message}`)
-      }
+    for (const { line, column, message } of messages) {
+      t.comment(`${filePath}:${line}:${column}: ${message}`)
     }
-
-    t.end()
   }
-
-  standard.lintFiles(files, options, callback)
+  t.end()
 })
 
 test('validate all google domains', function (t) {
