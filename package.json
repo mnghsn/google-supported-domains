@@ -30,14 +30,15 @@
   },
   "devDependencies": {
     "@types/eslint": "^8.4.0",
+    "@types/jest": "^28.1.0",
     "@types/prettier": "^2.6.0",
-    "@types/tape": "^4.13.0",
     "eslint": "^8.19.0",
     "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-jest": "^26.5.0",
     "eslint-plugin-prettier": "^4.2.0",
+    "jest": "^28.1.0",
     "node-fetch": "^2.6.0",
-    "prettier": "^2.7.0",
-    "tape": "^5.5.0"
+    "prettier": "^2.7.0"
   },
   "engines": {
     "node": "^12.0.0 || ^14.0.0 || >=16.0.0"
