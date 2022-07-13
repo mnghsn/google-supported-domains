@@ -1,39 +1,15 @@
-const { ESLint } = require('eslint')
-const test = require('tape')
-
 const googleSupportedDomains = require('../')
 
-test('lint source codes', async function (t) {
-  const eslint = new ESLint()
-  const results = await eslint.lintFiles(['**/*.js'])
-
-  for (const { filePath, messages } of results) {
-    messages.length === 0 ? t.pass(filePath) : t.fail(filePath)
-
-    for (const { line, column, message } of messages) {
-      t.comment(`${filePath}:${line}:${column}: ${message}`)
-    }
-  }
-  t.end()
-})
-
-test('validate all google domains', function (t) {
+test('validate all google domains', () => {
   const domains = googleSupportedDomains.all()
   const pattern = /^\.google\.[a-z.]+$/
-  const invalid = domains.filter(domain => !pattern.test(domain))
 
-  invalid.length === 0
-    ? t.pass(`${domains.length} domains`)
-    : t.fail(`${invalid.length} domains`)
-
-  for (const domain of invalid) {
-    t.comment(`invalid domain: ${domain}`)
+  for (const domain of domains) {
+    expect(pattern.test(domain)).toBeTruthy()
   }
-
-  t.end()
 })
 
-test('test main domain', function (t) {
+test('test main domain', () => {
   const expected = {
     'google.com': true,
     'google.co.jp': true,
@@ -42,17 +18,11 @@ test('test main domain', function (t) {
   }
 
   for (const domain in expected) {
-    t.equal(
-      googleSupportedDomains.test(domain),
-      expected[domain],
-      expected[domain] ? `yes: ${domain}` : `no: ${domain}`
-    )
+    expect(googleSupportedDomains.test(domain)).toEqual(expected[domain])
   }
-
-  t.end()
 })
 
-test('test subdomains', function (t) {
+test('test subdomains', () => {
   const expected = {
     'mail.google.com': true,
     'drive.google.com': true,
@@ -61,12 +31,6 @@ test('test subdomains', function (t) {
   }
 
   for (const domain in expected) {
-    t.equal(
-      googleSupportedDomains.test(domain),
-      expected[domain],
-      expected[domain] ? `yes: ${domain}` : `no: ${domain}`
-    )
+    expect(googleSupportedDomains.test(domain)).toEqual(expected[domain])
   }
-
-  t.end()
 })
