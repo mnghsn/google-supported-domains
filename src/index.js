@@ -6,7 +6,7 @@ module.exports = {
    * @public
    * @returns {string[]} Returns all domains as a string array.
    */
-  all: function all () {
+  all: function all() {
     return domains
   },
 
@@ -16,7 +16,7 @@ module.exports = {
    * @param {string} domain The domain to test.
    * @returns {boolean} Returns true if `domain` is a Google domain.
    */
-  test: function test (domain) {
+  test: function test(domain) {
     const parts = domain.toLowerCase().split('.')
 
     while (parts.length) {
