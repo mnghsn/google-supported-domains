@@ -1,6 +1,6 @@
-const googleSupportedDomains = require('../')
+const googleSupportedDomains = require('../src/index')
 
-describe('validate domains', () => {
+describe('all()', () => {
   test('all google domains', () => {
     const domains = googleSupportedDomains.all()
     const pattern = /^\.google\.[a-z.]+$/
@@ -11,8 +11,8 @@ describe('validate domains', () => {
   })
 })
 
-describe('test domains', () => {
-  test('main domain', () => {
+describe('test()', () => {
+  test('main domains', () => {
     const expected = {
       'google.com': true,
       'google.co.jp': true,
