@@ -20,6 +20,7 @@
     "name": "Jimmy Lin",
     "email": "jmlntw@gmail.com"
   },
+  "type": "module",
   "files": [
     "domains.js"
   ],
