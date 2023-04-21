@@ -1,8 +1,7 @@
 {
   "root": true,
   "env": {
-    "commonjs": true,
-    "es6": true,
+    "es2020": true,
     "node": true
   },
   "extends": [
@@ -11,6 +10,7 @@
     "plugin:prettier/recommended"
   ],
   "parserOptions": {
-    "ecmaVersion": 6
+    "ecmaVersion": "latest",
+    "sourceType": "module"
   }
 }
