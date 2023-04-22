@@ -24,7 +24,7 @@
   "files": [
     "domains.js"
   ],
-  "main": "src/index.js",
+  "exports": "./src/index.js",
   "scripts": {
     "build": "node scripts/build.js",
     "lint": "eslint ./**/*.js",
