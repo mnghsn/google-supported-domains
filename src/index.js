@@ -5,7 +5,7 @@ import { domains } from './domains.js'
  * @public
  * @returns {string[]} Returns all domains as a string array.
  */
-export function all() {
+function all() {
   return domains
 }
 
@@ -15,7 +15,7 @@ export function all() {
  * @param {string} domain The domain to test.
  * @returns {boolean} Returns true if `domain` is a Google domain.
  */
-export function test(domain) {
+function test(domain) {
   const parts = domain.toLowerCase().split('.')
 
   while (parts.length) {
@@ -26,3 +26,5 @@ export function test(domain) {
 
   return false
 }
+
+export default { all, test };

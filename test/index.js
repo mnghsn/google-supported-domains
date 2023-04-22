@@ -1,5 +1,5 @@
 import t from 'tap'
-import * as googleSupportedDomains from '../src/index.js'
+import googleSupportedDomains from '../src/index.js'
 
 t.test('all()', async t => {
   const domains = googleSupportedDomains.all()
