@@ -13,7 +13,7 @@ $ npm install google-supported-domains
 ## Usage
 
 ```js
-const domains = require('google-supported-domains')
+import domains from 'google-supported-domains'
 
 // Get all Google supported domains as a string array.
 domains.all()
