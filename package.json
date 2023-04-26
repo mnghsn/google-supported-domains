@@ -30,7 +30,7 @@
     "lint": "eslint ./**/*.js",
     "lint:fix": "eslint --fix ./**/*.js",
     "format": "prettier --check ./**/*.js",
-    "format:fix": "prettier --fix ./**/*.js",
+    "format:fix": "prettier --write ./**/*.js",
     "test": "tap --no-coverage"
   },
   "devDependencies": {
