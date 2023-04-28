@@ -1,4 +1,4 @@
-import { domains } from './domains.js'
+import { domains } from "./domains.js";
 
 /**
  * Returns all Google supported domains.
@@ -6,7 +6,7 @@ import { domains } from './domains.js'
  * @returns {string[]} Returns all domains as a string array.
  */
 function all() {
-  return domains
+  return domains;
 }
 
 /**
@@ -16,15 +16,15 @@ function all() {
  * @returns {boolean} Returns true if `domain` is a Google domain.
  */
 function test(domain) {
-  const parts = domain.toLowerCase().split('.')
+  const parts = domain.toLowerCase().split(".");
 
   while (parts.length) {
-    if (parts.shift() === 'google') {
-      return domains.indexOf(`.google.${parts.join('.')}`) >= 0
+    if (parts.shift() === "google") {
+      return domains.indexOf(`.google.${parts.join(".")}`) >= 0;
     }
   }
 
-  return false
+  return false;
 }
 
 export default { all, test };
