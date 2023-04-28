@@ -9,8 +9,23 @@ on:
       - master
 
 jobs:
+  lint:
+    name: Lint
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+      - name: Set up Node.js environment
+        uses: actions/setup-node@v3
+        with:
+          node-version: latest
+      - name: Install dependencies
+        run: npm install
+      - name: Run linter
+        run: npm run lint
+
   test:
-    name: npm test
+    name: Test
     runs-on: ubuntu-latest
     strategy:
       matrix:
@@ -27,5 +42,5 @@ jobs:
           node-version: ${{ matrix.node-version }}
       - name: Install dependencies
         run: npm install
-      - name: Run npm test script
+      - name: Run tester
         run: npm run test
