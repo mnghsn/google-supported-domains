@@ -1,8 +1,8 @@
-import t from 'tap'
-import { domains } from '../src/domains.js'
+import t from "tap";
+import { domains } from "../src/domains.js";
 
-t.test('domains', async t => {
+t.test("domains", async (t) => {
   for (const domain of domains) {
-    t.equal(/^\.google\.[a-z.]+$/.test(domain), true)
+    t.equal(/^\.google\.[a-z.]+$/.test(domain), true);
   }
-})
+});
