@@ -31,7 +31,7 @@
     "lint:fix": "eslint --fix ./**/*.js",
     "format": "prettier --check ./**/*.js",
     "format:fix": "prettier --write ./**/*.js",
-    "test": "tap --no-coverage"
+    "test": "tap"
   },
   "devDependencies": {
     "@types/eslint": "^8.37.0",
