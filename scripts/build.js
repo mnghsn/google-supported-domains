@@ -12,10 +12,8 @@ async function main() {
   const json = JSON.stringify(domains);
   const js = `export const domains = ${json}`;
 
-  const config = await prettier.resolveConfig(import.meta.url, {
-    parser: "babel",
-  });
-  const output = prettier.format(js, config);
+  const config = await prettier.resolveConfig(import.meta.url);
+  const output = await prettier.format(js, { parser: "babel", ...config });
 
   await fs.writeFile(OUTPUT_PATH, output, "utf8");
 }
