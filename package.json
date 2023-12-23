@@ -34,12 +34,12 @@
     "test": "tap"
   },
   "devDependencies": {
-    "@types/eslint": "^8.37.0",
+    "@types/eslint": "^8.56.0",
     "@types/prettier": "^3.0.0",
     "@types/tap": "^15.0.0",
     "eslint-config-prettier": "^9.0.0",
     "eslint-plugin-prettier": "^5.0.0",
-    "eslint": "^8.37.0",
+    "eslint": "^8.56.0",
     "node-fetch": "^3.3.1",
     "prettier": "^3.0.3",
     "tap": "^18.4.0"
