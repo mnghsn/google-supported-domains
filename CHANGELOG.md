@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file.
 
+## [v1.0.0] - 2023-12-23
+
+- **BREAKING**: Convert CommonJS to ESM.
+- **BREAKING**: Drop outdated Node.js versions.
+- (dev) Remove app-root-path.
+- (dev) Remove node-fetch.
+- (dev) Replace Standard with ESLint and Prettier.
+- (dev) Replace Jest with Tap.
+- (dev) Add dependabot.
+
 ## [v0.2.1] - 2022-05-20
 
 - (dev) Update a bunch of dependencies.
@@ -22,6 +32,7 @@ All notable changes to this project will be documented in this file.
 - First public release.
 
 <!-- Tag Links -->
+[v1.0.0]: https://github.com/jmlntw/google-supported-domains/releases/tag/v1.0.0
 [v0.2.1]: https://github.com/jmlntw/google-supported-domains/releases/tag/v0.2.1
 [v0.2.0]: https://github.com/jmlntw/google-supported-domains/releases/tag/v0.2.0
 [v0.1.1]: https://github.com/jmlntw/google-supported-domains/releases/tag/v0.1.1
