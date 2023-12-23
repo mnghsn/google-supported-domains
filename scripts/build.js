@@ -1,5 +1,4 @@
 import * as fs from "node:fs/promises";
-import fetch from "node-fetch";
 import prettier from "prettier";
 
 const GOOGLE_SUPPORTED_DOMAINS_URL = "https://www.google.com/supported_domains";
