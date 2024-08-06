@@ -41,7 +41,7 @@
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-prettier": "^5.2.0",
     "prettier": "^3.3.0",
-    "tap": "^20.0.3"
+    "tap": "^21.0.0"
   },
   "engines": {
     "node": "^18.0.0 || ^20.0.0 || >=22.0.0"
