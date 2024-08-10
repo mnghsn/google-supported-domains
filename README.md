@@ -13,24 +13,24 @@ $ npm install google-supported-domains
 ## Usage
 
 ```js
-import domains from 'google-supported-domains'
+import domains from "google-supported-domains";
 
 // Get all Google supported domains as a string array.
-domains.all()
+domains.all();
 // => ['.google.ad', '.google.ae', '.google.al', ...]
 
 // Test if any domain is a Google domain.
-domains.test('www.google.com')    // => true
-domains.test('www.google.co.jp')  // => true
-domains.test('mail.google.com')   // => true
-domains.test('www.example.com')   // => false
-domains.test('foo.example.net')   // => false
+domains.test("www.google.com"); // => true
+domains.test("www.google.co.jp"); // => true
+domains.test("mail.google.com"); // => true
+domains.test("www.example.com"); // => false
+domains.test("foo.example.net"); // => false
 ```
 
 ## Acknowledgements
 
-* <https://github.com/vweevers/is-google-domain>
-* <https://www.google.com/supported_domains>
+- <https://github.com/vweevers/is-google-domain>
+- <https://www.google.com/supported_domains>
 
 ## License
 
